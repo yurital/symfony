@@ -9,5 +9,5 @@ news_all:
 news_one:
 #    в урле как будет выглядеть
     path:     /news/{slug}
-#    передаем в бандл название контроллера и название экшена
+#    передаем в бандл название контроллера и название экшенаа
     defaults: { _controller: NewsBundle:News:oneArticle }
