@@ -1,0 +1,8 @@
+Самые свежие новости!
+
+{% for article in news %}
+    <hr>
+    <!--твиговская форма вывода ссылок. ньюс_олл - наш роут-->
+    <a href="{{path('news_one',{'slug':article.slug})}}">{{article.title}}</a>
+    <hr>
+{% endfor %}

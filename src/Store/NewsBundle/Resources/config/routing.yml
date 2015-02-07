@@ -1,0 +1,13 @@
+news_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: NewsBundle:Default:index }
+
+news_all:
+    path:     /news
+    defaults: { _controller: NewsBundle:News:index }
+
+news_one:
+#    в урле как будет выглядеть
+    path:     /news/{slug}
+#    передаем в бандл название контроллера и название экшена
+    defaults: { _controller: NewsBundle:News:oneArticle }
