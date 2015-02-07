@@ -1,4 +1,11 @@
 services:
-#    news.example:
-#        class: Store\NewsBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    sonata.admin.post:
+        class: Store\NewsBundle\Admin\PostAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Post" }
+        arguments:
+            - ~
+            - Store\NewsBundle\Entity\Post
+            - ~
+        calls:
+            - [ setTranslationDomain, [StoreNewsBundle]]
